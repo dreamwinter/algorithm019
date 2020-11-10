@@ -1,6 +1,8 @@
 import com.sun.xml.internal.fastinfoset.util.CharArray;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * @author libingc
@@ -22,4 +24,6 @@ class Solution {
         Arrays.sort(char2);
         return Arrays.equals(char1,char2);
     }
+
+
 }

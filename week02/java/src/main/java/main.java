@@ -8,10 +8,9 @@ import java.io.Console;
 public class main {
 
    public static void main(String[] args){
-       String s = "anagram";
-       String t = "nagaram";
-       Solution tester = new Solution();
+       String[] content = new String[]{
+               "eat","tea","tan","ate","nat","bat"};
        System.out.println(
-              tester.isAnagram(s,t));
+              new leetCode().groupAnagrams(content));
     }
 }
