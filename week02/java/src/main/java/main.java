@@ -1,5 +1,6 @@
 import dreamwinter.algorithm019.week02.BinaryTreeDemo;
 import dreamwinter.algorithm019.week02.TreeNode;
+import dreamwinter.algorithm019.week02.UglyNumber;
 
 
 /**
@@ -26,7 +27,10 @@ public class main {
        System.out.println(btDemo.inorderTraversal(node5));
        System.out.println(btDemo.preorderTraversal(node5));
 
-
+       //丑数计算
+       UglyNumber uNumber  = new UglyNumber();
+       System.out.println(uNumber.nthUglyNumber(10));
+       System.out.println(uNumber.nthUglyNumber(1407));
 
    }
 }
