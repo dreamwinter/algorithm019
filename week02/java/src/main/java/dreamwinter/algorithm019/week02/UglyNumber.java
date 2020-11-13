@@ -15,18 +15,18 @@ public class UglyNumber {
     * */
     private int[] uglyNumber = {2,3,5};
     public int nthUglyNumber(int n) {
-        HashSet<Integer> quickList = new HashSet<>(32);
-        PriorityQueue<Integer> heap = new PriorityQueue<Integer>();
-        quickList.add(1);
-        heap.offer(1);
+        HashSet<Long> quickList = new HashSet<>(32);
+        PriorityQueue<Long> heap = new PriorityQueue<Long>();
+        quickList.add(1L);
+        heap.offer(1L);
         int counter=0;
         while (counter<n){
-            int seed = heap.poll();   //从最小堆弹出最小的元素来计算
+            long seed = heap.poll();   //从最小堆弹出最小的元素来计算
             if(++counter>=n){
-                return seed;
+                return (int)seed;
             }
-            for (int val:uglyNumber) {
-                int tempValue = val*seed;
+            for (long val:uglyNumber) {
+                long tempValue = val*seed;
                 if(!quickList.contains(tempValue)) {
                     quickList.add(tempValue);
                     heap.offer(tempValue);
